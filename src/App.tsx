@@ -143,20 +143,20 @@ export default function App() {
   return (
     <main
       className={cn(
-        'flex h-screen flex-col items-center justify-center gap-40',
-        'bg-[#FFD700] pb-32',
+        'flex h-screen flex-col items-center justify-center sm:gap-40',
+        'bg-[#FFD700] pb-[env(safe-area-inset-bottom)] sm:pb-[calc(env(safe-area-inset-bottom)+8rem)]',
       )}
     >
       <h1
         className={cn(
-          'font-[Baloo] text-6xl font-bold text-[#333333] shadow-black',
-          'drop-shadow',
+          'font-[Baloo] text-xl font-bold text-[#333333] shadow-black sm:text-3xl md:text-4xl lg:text-6xl',
+          'pb-8 drop-shadow sm:pb-0',
         )}
       >
         {t('title')}
       </h1>
       <section className='flex flex-col items-center gap-12'>
-        <Timer className='mb-10' />
+        <Timer className='sm:mb-10' />
         <VolumeControl />
         <AudioOrVideoSourceInput
           onChange={handleAudioOrVideoSourceInputChange}
@@ -189,7 +189,7 @@ export default function App() {
         </MediaPlayer>
       </div>
       <a
-        className='absolute right-5 top-4'
+        className='absolute right-5 top-4 hidden sm:block'
         target='_blank'
         rel='noopener noreferrer'
         href='https://github.com/ZaikoXander/HoraDeSilencioInterrompido'
