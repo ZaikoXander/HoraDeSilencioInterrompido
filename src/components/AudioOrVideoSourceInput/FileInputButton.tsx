@@ -39,7 +39,7 @@ export default function FileInputButton({ onChange }: FileInputButtonProps) {
   }
 
   return (
-    <div>
+    <div className='w-52 sm:w-full'>
       <input
         type='file'
         ref={inputRef}
